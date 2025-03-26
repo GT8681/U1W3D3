@@ -29,14 +29,23 @@
      event.preventDefault();
 
         
-         const inputNode =document.getElementById("taskInput")
-         const inputValue = inputNode.value
+           const inputNode =document.getElementById("taskInput")
+           const inputValue = inputNode.value
 
-         const li = document.createElement("li");
-         li.innerText = inputNode.value
-         console.log(li)
+              const li = document.createElement("li")
+              li.innerText = inputNode.value
 
+             console.log(li)
+
+             li.onclick = function(event){
+             event.currentTarget.classList.toggle("strike")
+
+          }
+         
          ul.appendChild(li)
+         inputNode.value = ""
+
+        
       }
 
 

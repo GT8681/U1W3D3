@@ -12,10 +12,17 @@ main{
 }
 
 
-ul li.checked {
-    background:white;
-    color: #fff;
-    text-decoration: line-through;
+ul  {
+    list-style: none;
+    padding: 0%;
+}
+
+li{
+     background-color: aqua;
+     margin-bottom: 3px;
+     padding: 0.5rem 0.25rem;
+
+
 }
  input{
     width: 300px;
@@ -30,4 +37,8 @@ input,button[type='submit']{
 button[type='submit']{
 
     min-width: 36px;
+}
+
+.strike{
+    text-decoration: line-through;
 }
