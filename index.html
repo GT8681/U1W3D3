@@ -10,22 +10,33 @@
     <main>
         <h1>TODO LIST</h1>
       <form>
-            <input id = "content" type="text" placeholder="Inserisci la tua lista">
-            <button type="submit"></button>
+            <input id = "taskInput" type="text" placeholder="Inserisci la tua lista" required>
+            <button type="submit">AGGIUNGI</button>
 
       </form>
+                   <ul id = "list">
 
 
+                   </ul>
     </main>
 
 
     <script>
       const form = document.querySelector("form")
-     
+      const ul = document.getElementById("list")
 
       form.onsubmit = function(event){
-     event.preventDefault()
+     event.preventDefault();
 
+        
+         const inputNode =document.getElementById("taskInput")
+         const inputValue = inputNode.value
+
+         const li = document.createElement("li");
+         li.innerText = inputNode.value
+         console.log(li)
+
+         ul.appendChild(li)
       }
 
 
