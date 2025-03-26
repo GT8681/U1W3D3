@@ -7,38 +7,28 @@
     <title>U1W3D3</title>
 </head>
 <body>
-    
+    <main>
+        <h1>TODO LIST</h1>
+      <form>
+            <input id = "content" type="text" placeholder="Inserisci la tua lista">
+            <button type="submit"></button>
+
+      </form>
 
 
-<div id="myDIV" class="header">
-    <h1>TASK LIST</h1>
-    <input type="text" id="input" placeholder="NOMI....">
-    <button onclick="newElement()" class="botton">AGGIUGIMI</button>
-  </div>
-  
-  <ul id="myUL">
-   
-    <li class="checked"></li>
-    
-  </ul>
+    </main>
+
+
     <script>
+      const form = document.querySelector("form")
+     
 
-          
-                function newElement() {
-                const li = document.createElement("li");
-                const inputValue = document.getElementById("input").value;
-                const a = document.createTextNode(inputValue);
-                 li.appendChild(a);
-                 if (inputValue === '') {
-                      alert("ERRORE INSERISCI UN NOME");
-                  } else {
-                        document.getElementById("myUL").appendChild(li);
-            }
-                           document.getElementById("input").value = "";
-                           const span = document.createElement("button");
-                           li.appendChild(span);
+      form.onsubmit = function(event){
+     event.preventDefault()
 
-         }
+      }
+
+
     </script>
 </body>
 </html>
